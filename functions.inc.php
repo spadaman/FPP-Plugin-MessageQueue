@@ -124,7 +124,12 @@ function getNewPluginMessages($subscriptions="") {
 				//if TWO messages arrive with the EXACT same timestamp. this could cause one message to possibly be missed, 
 				//highly unlikely
 				
-				$messagesQuery = "SELECT * FROM messages WHERE pluginName = '".$pluginName."' AND timestamp > '".$pluginLastRead."'";
+				// @spadaman changes from FalconChristmas branch,
+				if ($pluginName == "TwilioControl") {
+					$messagesQuery = "SELECT * FROM messages WHERE pluginName = '".$pluginName."' AND timestamp > '".$pluginLastRead."' LIMIT 1";
+				} else {
+					$messagesQuery = "SELECT * FROM messages WHERE pluginName = '".$pluginName."' AND timestamp > '".$pluginLastRead."'";
+				}
 				
 				if($DEBUG) {
 					logEntry("MESSAGE QUEUE: New Messages query: ".$messagesQuery);

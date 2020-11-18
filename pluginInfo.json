@@ -1,0 +1,19 @@
+{
+    "repoName": "FPP-Plugin-MessageQueue",
+    "name": "Message Queue Aggregator for Plugins",
+    "linkName": "MessageQueue",
+    "author": "Ben Shaver (bshaver) and Pat Delaney (patdelaney). Enhanced by spadaman",
+    "description": "Message Queue Aggregator for Plugins",
+    "homeURL": "https://github.com/spadaman/FPP-Plugin-MessageQueue",
+    "srcURL": "https://github.com/spadaman/FPP-Plugin-MessageQueue.git",
+    "bugURL": "https://github.com/spadaman/FPP-Plugin-MessageQueue/issues",
+    "allowUpdates": 1,
+    "versions": [
+        {
+            "minFPPVersion": "2.0",
+            "maxFPPVersion": "0",
+            "branch": "master",
+            "sha": ""
+        }
+    ]
+}
